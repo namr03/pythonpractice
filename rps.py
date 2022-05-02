@@ -1,6 +1,6 @@
 while True:
     game = input("Start or stop game?: ").lower()
-    if game == "quit":
+    if game == "stop":
         break
     elif game == "start":
         wynik1 = 0
