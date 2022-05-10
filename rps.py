@@ -3,8 +3,8 @@ while True:
     if game == "stop":
         break
     elif game == "start":
-        wynik1 = 0
-        wynik2 = 0
+        points1 = 0
+        points2 = 0
         while True:
             print("-----------------------------------\n" * 10)
             p1 = int(input("PLAYER 1 Choose rock , paper or scissors " + "\n" + "1 - Rock, 2 - Paper, 3 - Scissors:  "))
@@ -28,39 +28,39 @@ while True:
                     continue
                 elif p1 == 1 and p2 == 2:
                     print("Player 2 wins a round" + "\n")
-                    wynik2 += 1
-                    if wynik1 == 5:
-                        print("Player 1 wins by ", int(wynik1-wynik2), "Points")
+                    points2 += 1
+                    if points1 == 5:
+                        print("Player 1 wins by ", int(points1-points2), "Points")
                         quit()
-                    elif wynik2 == 5:
-                        print("Player 2 wins by ", int(wynik2-wynik1), "Points")
+                    elif points2 == 5:
+                        print("Player 2 wins by ", int(points2-points1), "Points")
                         quit()
                 elif p1 == 1 and p2 == 3:
                     print("Player 1 wins a round" + "\n")
-                    wynik1 += 1
-                    if wynik1 == 5:
-                        print("Player 1 wins by ", int(wynik1-wynik2), "Points")
+                    points1 += 1
+                    if points1 == 5:
+                        print("Player 1 wins by ", int(points1-points2), "Points")
                         quit()
-                    elif wynik2 == 5:
-                        print("Player 2 wins by ", int(wynik2-wynik1), "Points")
+                    elif points2 == 5:
+                        print("Player 2 wins by ", int(points2-points1), "Points")
                         quit()
                 elif p1 == 2 and p2 == 1:
                     print("Player 1 wins a round" + "\n")
-                    wynik1 += 1
-                    if wynik1 == 5:
-                        print("Player 1 wins by ", int(wynik1-wynik2), "Points")
+                    points1 += 1
+                    if points1 == 5:
+                        print("Player 1 wins by ", int(points1-points2), "Points")
                         quit()
-                    elif wynik2 == 5:
-                        print("Player 2 wins by ", int(wynik2-wynik1), "Points")
+                    elif points2 == 5:
+                        print("Player 2 wins by ", int(points2-points1), "Points")
                         quit()
                 elif p1 == 2 and p2 == 3:
                     print("Player 2 wins a round" + "\n")
-                    wynik2 += 1
-                    if wynik1 == 5:
-                        print("Player 1 wins by ", int(wynik1-wynik2), "Points")
+                    points2 += 1
+                    if points1 == 5:
+                        print("Player 1 wins by ", int(points1-points2), "Points")
                         quit()
-                    elif wynik2 == 5:
-                        print("Player 2 wins by ", int(wynik2-wynik1), "Points")
+                    elif points2 == 5:
+                        print("Player 2 wins by ", int(points2-points1), "Points")
                         quit()
 
     else:
