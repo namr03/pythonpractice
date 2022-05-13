@@ -6,12 +6,12 @@ while True:
         points1 = 0
         points2 = 0
         while True:
-            print("-----------------------------------\n" * 10)
+            print("-----------------------------------\n" * 15)
             p1 = int(input("PLAYER 1 Choose rock , paper or scissors " + "\n" + "1 - Rock, 2 - Paper, 3 - Scissors:  "))
             if p1 > 3 or p1 < 1:
                 print("Incorrect answer PLAYER 1")
                 continue
-            print("-----------------------------------\n" * 10)
+            print("-----------------------------------\n" * 15)
             p2 = int(input("PLAYER 2 Choose rock , paper or scissors " + "\n" + "1 - Rock, 2 - Paper, 3 - Scissors:  "))
             if p2 > 3 or p2 < 1:
                 print("Incorrect answer PLAYER 2")
