@@ -1,3 +1,8 @@
+combinations = {
+    1 : 3,
+    2 : 1,
+    3 : 2
+}
 while True:
     game = input("Start or stop game?: ").lower()
     if game == "stop":
@@ -6,62 +11,30 @@ while True:
         points1 = 0
         points2 = 0
         while True:
-            print("-----------------------------------\n" * 15)
             p1 = int(input("PLAYER 1 Choose rock , paper or scissors " + "\n" + "1 - Rock, 2 - Paper, 3 - Scissors:  "))
-            if p1 > 3 or p1 < 1:
-                print("Incorrect answer PLAYER 1")
-                continue
-            print("-----------------------------------\n" * 15)
+            while p1 not in combinations:
+                print("wrong input")
+                p1 = int(
+                    input("PLAYER 1 Choose rock , paper or scissors " + "\n" + "1 - Rock, 2 - Paper, 3 - Scissors:  "))
             p2 = int(input("PLAYER 2 Choose rock , paper or scissors " + "\n" + "1 - Rock, 2 - Paper, 3 - Scissors:  "))
-            if p2 > 3 or p2 < 1:
-                print("Incorrect answer PLAYER 2")
-                continue
-            else:
-                if p1 == 1 and p2 == 1:
-                    print("It's a draw" + "\n")
-                    continue
-                if p1 == 2 and p2 == 2:
-                    print("It's a draw" + "\n")
-                    continue
-                if p1 == 3 and p2 == 3:
-                    print("It's a draw" + "\n")
-                    continue
-                elif p1 == 1 and p2 == 2:
-                    print("Player 2 wins a round" + "\n")
-                    points2 += 1
-                    if points1 == 5:
-                        print("Player 1 wins by ", int(points1-points2), "Points")
-                        quit()
-                    elif points2 == 5:
-                        print("Player 2 wins by ", int(points2-points1), "Points")
-                        quit()
-                elif p1 == 1 and p2 == 3:
-                    print("Player 1 wins a round" + "\n")
-                    points1 += 1
-                    if points1 == 5:
-                        print("Player 1 wins by ", int(points1-points2), "Points")
-                        quit()
-                    elif points2 == 5:
-                        print("Player 2 wins by ", int(points2-points1), "Points")
-                        quit()
-                elif p1 == 2 and p2 == 1:
-                    print("Player 1 wins a round" + "\n")
-                    points1 += 1
-                    if points1 == 5:
-                        print("Player 1 wins by ", int(points1-points2), "Points")
-                        quit()
-                    elif points2 == 5:
-                        print("Player 2 wins by ", int(points2-points1), "Points")
-                        quit()
-                elif p1 == 2 and p2 == 3:
-                    print("Player 2 wins a round" + "\n")
-                    points2 += 1
-                    if points1 == 5:
-                        print("Player 1 wins by ", int(points1-points2), "Points")
-                        quit()
-                    elif points2 == 5:
-                        print("Player 2 wins by ", int(points2-points1), "Points")
-                        quit()
+            while p2 not in combinations:
+                print("wrong input")
+                p2 = int(
+                    input("PLAYER 2 Choose rock , paper or scissors " + "\n" + "1 - Rock, 2 - Paper, 3 - Scissors:  "))
+            if combinations[p1] == p2:
+                print("p1 won")
+                points1 += 1
 
+            elif combinations[p2] == p1:
+                print("p2 won")
+                points2 += 1
+            elif p2 == p1:
+                print("Draw")
+            if points1 == 10:
+                print("Player 1 won!")
+                quit()
+            elif points2 == 10:
+                print("Player 2 won!")
+                quit()
     else:
         continue
